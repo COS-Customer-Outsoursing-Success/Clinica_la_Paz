@@ -1,0 +1,33 @@
+{
+  "Clinica_la_Paz": {
+    "schema": "bbdd_cos_bog_clinica_de_la_paz",
+    "table": "tb_asignacion_clinica_la_paz_ds",
+    "nombre_asignacion": "asignacion_clinica_la_paz",
+
+    "telefonos": ["pacientetelefono"],
+    
+    "columnas_fecha": [
+      "fechacitaini", "fechacitafin", "pacientefechanac",
+      "turnofechaini", "turnofechafin", "fechacumplida", "fechafactura"
+    ],
+
+    "renombrar_columnas": {
+    },
+
+    "columnas_necesarias": [
+      "oid", "centrooid", "centrocod", "centronom", "especialioid", "especialicod", "especialinom", "medicooid",
+      "medicocod", "mediconom", "consultoriooid", "consultoriocod", "consultorionom", "fechacitaini", "fechacitafin", 
+      "pacientedocumento", "pacientenombre", "pacientefechanac", "pacientetelefono", "pacientetelefono_2", "pacientetipotel", 
+      "estilo", "estado", "tipocita", "tipoasignacion", "estiloprimeravez", "estilocontrol", "estiloremision", "tipopersonal", 
+      "tipotelefonica", "tipourgencias", "tipointernet", "tipoavantel", "edad", "usuarioasignacod", "usuarioasignanom", "turnooid", 
+      "turnofechaini", "turnofechafin", "pacientetipodoc", "actividadoid", "actividadcod", "actividadnom", "pacientecarpeta1", 
+      "pacientecarpeta2", "observaciones", "fechacumplida", "usuariocumplecod", "usuariocumplenom", "numerofactura", "fechafactura",
+      "estadofactura", "planbeneficiooid", "planbeneficiocod", "planbeneficionom", "contratooid", "contratocod", "contratonom", 
+      "entidadadminoid", "entidadadmincod", "entidadadminnom", "entidadadmintercero", "usuariocancelanom", "usuariocancelacod", 
+      "fecha_asignacion", "anio", "periodo", "nombre_base", "hoja"
+    ],
+    
+    "table_duplicados": "tb_asignacion_clinica_la_paz_duplicate_ds",
+    "cols_duplicados": ["oid","periodo"]
+  }
+}

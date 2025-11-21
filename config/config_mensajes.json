@@ -1,0 +1,51 @@
+{
+  "mensajes_clinica_la_paz": {
+    "schema": "bbdd_cos_bog_clinica_de_la_paz",
+    "table": "tb_asignacion_clinica_la_paz_ds",
+    "query_file": "query_mensajes_diarios.sql",
+    
+    "plantillas": {
+      "presencial_principal": "Sr(a) {nombre}, CLINICA NUESTRA SEÑORA DE LA PAZ te recuerda tu cita de {especialidad} en la modalidad Presencial con el profesional {profesional}, para el dia {fecha} a las {hora} en la sede PRINCIPAL Carrera 69 # 12 - 75 Barrio Villa Alsacia. RECUERDA: para el día de la cita llegar 40 minutos antes de la hora programada con autorización, orden, documento de identidad y tapabocas (únicamente si presentas síntomas gripales)",
+      
+      "presencial_uniminuto": "Sr(a) {nombre}, CLINICA NUESTRA SEÑORA DE LA PAZ te recuerda tu cita de {especialidad} en la modalidad Presencial con el profesional {profesional}, para el dia {fecha} a las {hora} en la sede UNIMINUTO Transversal 76 # 81a - 09 Frente al Colegio Minuto de Dios. RECUERDA: para el día de la cita llegar 40 minutos antes de la hora programada con autorización, orden, documento de identidad y tapabocas (únicamente si presentas síntomas gripales)",
+      
+      "virtual": "Sr(a) {nombre}, CLINICA NUESTRA SEÑORA DE LA PAZ te recuerda tu cita de {especialidad} en la modalidad Virtual con el profesional {profesional}, para el dia {fecha} a las {hora}. RECUERDA: Para el día de la cita se recomienda verificar estado de conectividad del dispositivo donde se tomara la consulta, estar en un lugar que garantice la privacidad de la consulta (sin ruidos y distracciones) para poder brindar un excelente servicio, por favor tener a la mano orden, autorización y documento de identidad"
+    },
+    
+    "reglas_identificacion": {
+      "modalidad_virtual": {
+        "columna": "consultorionom",
+        "palabra_clave": "virtual"
+      },
+      "sede_uniminuto": {
+        "columna": "centronom",
+        "palabra_clave": "uniminuto"
+      }
+    },
+    
+    "nombres_dias": {
+      "Monday": "Lunes",
+      "Tuesday": "Martes",
+      "Wednesday": "Miércoles",
+      "Thursday": "Jueves",
+      "Friday": "Viernes",
+      "Saturday": "Sábado",
+      "Sunday": "Domingo"
+    },
+    
+    "nombres_meses": {
+      "01": "Enero",
+      "02": "Febrero",
+      "03": "Marzo",
+      "04": "Abril",
+      "05": "Mayo",
+      "06": "Junio",
+      "07": "Julio",
+      "08": "Agosto",
+      "09": "Septiembre",
+      "10": "Octubre",
+      "11": "Noviembre",
+      "12": "Diciembre"
+    }
+  }
+}
