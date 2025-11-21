@@ -9,7 +9,7 @@ SELECT
     centronom
 FROM bbdd_cos_bog_clinica_de_la_paz.tb_asignacion_clinica_la_paz_ds
 WHERE 
-    DATE(fechacitaini) >= CURDATE()
+    DATE(fecha_asignacion) >= CURDATE()
     AND pacientetelefono REGEXP '^3[0-9]{9}$'
     AND pacientetelefono != '-'
     AND pacientenombre IS NOT NULL
@@ -31,7 +31,7 @@ SELECT
     centronom
 FROM bbdd_cos_bog_clinica_de_la_paz.tb_asignacion_clinica_la_paz_ds
 WHERE 
-    DATE(fechacitaini) >= CURDATE()
+    DATE(fecha_asignacion) >= CURDATE()
     AND pacientetelefono_2 REGEXP '^3[0-9]{9}$'
     AND pacientetelefono_2 != '-'
     AND pacientetelefono_2 IS NOT NULL

@@ -135,7 +135,7 @@ class LoadAsignacion:
                 if col in self.df.columns:
                     self.df[col] = self.df[col].apply(estandarizar_telefono)
             
-            # Dividir teléfonos múltiples (ejemplo: 3132896774-3143712382)
+            # Dividir teléfonos múltiples (ejemplo: 3132896774-3143712382 o 3244122425 3045452344)
             print("\n📞 Procesando teléfonos múltiples...")
             for col in telefonos:
                 if col in self.df.columns:
@@ -147,13 +147,21 @@ class LoadAsignacion:
                         if pd.isna(x) or x == '-':
                             return x, '-'
                         x = str(x).strip()
+                        
+                        # Detectar separador (guión o espacio)
                         if '-' in x:
                             partes = x.split('-')
-                            tel1 = partes[0].strip()
-                            tel2 = partes[1].strip() if len(partes) > 1 else '-'
-                            return tel1, tel2
+                        elif ' ' in x:
+                            # Filtrar espacios múltiples y dividir
+                            partes = [p.strip() for p in x.split() if p.strip()]
                         else:
                             return x, '-'
+                        
+                        # Extraer teléfonos
+                        tel1 = partes[0].strip() if len(partes) > 0 else '-'
+                        tel2 = partes[1].strip() if len(partes) > 1 else '-'
+                        
+                        return tel1, tel2
                     
                     # Aplicar división
                     self.df[[col, col_secundario]] = self.df[col].apply(
